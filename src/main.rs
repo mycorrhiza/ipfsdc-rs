@@ -5,7 +5,7 @@ extern crate ipfs_client;
 extern crate tokio_core;
 extern crate multiaddr;
 
-use clap::{ App, AppSettings };
+use clap::{ App, AppSettings, Arg };
 
 use context::Context;
 
@@ -30,9 +30,15 @@ fn main() {
             info::subcommand(),
             version::subcommand(),
         ])
+        .args(&[
+            Arg::with_name("api")
+                .long("api")
+                .help("Specify the ipfs daemon to connect to")
+                .default_value("/ip4/127.0.0.1/tcp/5001/https")
+        ])
         .get_matches();
 
-    let mut context = Context::new();
+    let mut context = Context::new(&matches);
 
     match matches.subcommand() {
         ("info", Some(matches)) => info::run(&mut context, matches),
