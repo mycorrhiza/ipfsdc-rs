@@ -15,7 +15,7 @@ mod info;
 mod version;
 
 fn main() {
-    let matches = App::new("IPFS Daemon Client")
+    let matches = App::new("IPFS Daemon CLI")
         .author(crate_authors!())
         .version(crate_version!())
         .settings(&[
