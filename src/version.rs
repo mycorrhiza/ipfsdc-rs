@@ -1,11 +1,10 @@
-use clap::{ App, Arg, SubCommand, AppSettings, ArgMatches };
+use clap::{ App, Arg, SubCommand, ArgMatches };
 
 use context::Context;
 
 pub fn subcommand() -> App<'static, 'static> {
     SubCommand::with_name("version")
         .about("Shows the ipfs daemon's version information")
-        .setting(AppSettings::DeriveDisplayOrder)
         .args(&[
             Arg::with_name("number")
                 .short("n")

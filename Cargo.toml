@@ -7,4 +7,4 @@ authors = ["Wim Looman <wim@nemo157.com>"]
 ipfs-client = { git = "https://github.com/Nemo157/ipfs-client-rs" }
 futures = "0.1.2"
 tokio-core = "0.1.0"
-clap = "2.16.2"
+clap = { git = "https://github.com/kbknapp/clap-rs" }
