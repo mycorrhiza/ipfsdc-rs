@@ -3,6 +3,7 @@ extern crate clap;
 extern crate futures;
 extern crate ipfs_client;
 extern crate tokio_core;
+extern crate multiaddr;
 
 use clap::{ App, AppSettings };
 

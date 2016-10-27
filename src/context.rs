@@ -12,7 +12,7 @@ pub struct Context {
 impl Context {
     pub fn new() -> Context {
         let event_loop = Core::new().expect("TODO: what could go wrong here?");
-        let client = Client::new(event_loop.handle(), "http://localhost:5001/api/v0/");
+        let client = Client::new(event_loop.handle(), "/ip4/127.0.0.1/tcp/5001/https".parse().unwrap());
         Context {
             event_loop: event_loop,
             client: client,
