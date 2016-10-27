@@ -1,13 +1,16 @@
 #[macro_use]
 extern crate clap;
-extern crate tokio_core;
+extern crate futures;
 extern crate ipfs_client;
+extern crate tokio_core;
 
 use clap::{ App, AppSettings };
 
 use context::Context;
 
 mod context;
+
+mod info;
 mod version;
 
 fn main() {
@@ -23,6 +26,7 @@ fn main() {
             AppSettings::DeriveDisplayOrder,
         ])
         .subcommands(vec![
+            info::subcommand(),
             version::subcommand(),
         ])
         .get_matches();
@@ -30,6 +34,7 @@ fn main() {
     let mut context = Context::new();
 
     match matches.subcommand() {
+        ("info", Some(matches)) => info::run(&mut context, matches),
         ("version", Some(matches)) => version::run(&mut context, matches),
         _ => unreachable!(),
     }

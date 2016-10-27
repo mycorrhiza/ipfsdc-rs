@@ -137,7 +137,7 @@ dependencies = [
 [[package]]
 name = "ipfs-client"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/ipfs-client-rs#7de02305380b6b42e5b2887aba8054f75ea7e74f"
+source = "git+https://github.com/Nemo157/ipfs-client-rs#383f646996203bdce52c428731827bf806d686c6"
 dependencies = [
  "curl 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
