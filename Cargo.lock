@@ -2,7 +2,7 @@
 name = "ipfsdc"
 version = "0.1.0"
 dependencies = [
- "clap 2.16.2 (git+https://github.com/kbknapp/clap-rs)",
+ "clap 2.16.3 (git+https://github.com/kbknapp/clap-rs)",
  "futures 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "ipfs-client 0.1.0 (git+https://github.com/Nemo157/ipfs-client-rs)",
  "multiaddr 0.1.0 (git+https://github.com/Nemo157/multiaddr-rs)",
@@ -59,8 +59,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "clap"
-version = "2.16.2"
-source = "git+https://github.com/kbknapp/clap-rs#4f0780fbaa67a59c427ff3ddd347beb653ceebda"
+version = "2.16.3"
+source = "git+https://github.com/kbknapp/clap-rs#8190a1c9d950babb803d230cf264b66bb7517c4e"
 dependencies = [
  "ansi_term 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "bitflags 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -143,7 +143,7 @@ dependencies = [
 [[package]]
 name = "ipfs-client"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/ipfs-client-rs#bcba48f97137849bd3ca93d8fcef30b556250a56"
+source = "git+https://github.com/Nemo157/ipfs-client-rs#b78fe5657ab2b169d2412e2f0afcc5e1bec63694"
 dependencies = [
  "curl 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -233,9 +233,10 @@ dependencies = [
 [[package]]
 name = "multiaddr"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/multiaddr-rs#45840b42b098826ce0bf78a57c43d032c66445b1"
+source = "git+https://github.com/Nemo157/multiaddr-rs#a1090a830833eca1b515800da98dce214e9d2c51"
 dependencies = [
  "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
+ "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "multihash 0.1.0 (git+https://github.com/Nemo157/multihash-rs)",
  "varint 0.1.0 (git+https://github.com/Nemo157/varint-rs)",
 ]
@@ -521,7 +522,7 @@ dependencies = [
 "checksum bitflags 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8dead7461c1127cf637931a1e50934eb6eee8bff2f74433ac7909e9afcee04a3"
 "checksum bitflags 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "aad18937a628ec6abcd26d1489012cc0e18c21798210f491af69ded9b881106d"
 "checksum cfg-if 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "de1e760d7b6535af4241fca8bd8adf68e2e7edacc6b29f5d399050c5e48cf88c"
-"checksum clap 2.16.2 (git+https://github.com/kbknapp/clap-rs)" = "<none>"
+"checksum clap 2.16.3 (git+https://github.com/kbknapp/clap-rs)" = "<none>"
 "checksum curl 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)" = "180f002567c2e45472018922f2cda208aad6effa0a09e7704bc8313e53a59f9f"
 "checksum curl-sys 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "4ae8698d4d2bc4b8182a11f4a5298fa03d2127c29e95dbae538d0cf003141818"
 "checksum dbghelp-sys 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "97590ba53bcb8ac28279161ca943a924d1fd4a8fb3fa63302591647c4fc5b850"
