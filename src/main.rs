@@ -13,6 +13,7 @@ mod context;
 
 mod info;
 mod version;
+mod swarm;
 
 fn main() {
     let matches = App::new("IPFS Daemon CLI")
@@ -29,6 +30,7 @@ fn main() {
         .subcommands(vec![
             info::subcommand(),
             version::subcommand(),
+            swarm::subcommand(),
         ])
         .args(&[
             Arg::with_name("api")
@@ -43,6 +45,7 @@ fn main() {
     match matches.subcommand() {
         ("info", Some(matches)) => info::run(&mut context, matches),
         ("version", Some(matches)) => version::run(&mut context, matches),
+        ("swarm", Some(matches)) => swarm::run(&mut context, matches),
         _ => unreachable!(),
     }
 }
