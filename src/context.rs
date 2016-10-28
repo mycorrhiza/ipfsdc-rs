@@ -1,6 +1,6 @@
 use std::marker::PhantomData;
 
-use clap::ArgMatches;
+use clap::{ Arg, ArgMatches };
 use ipfs_client::Client;
 use tokio_core::reactor::Core;
 
@@ -20,5 +20,14 @@ impl Context {
             client: client,
             private_construction: PhantomData,
         }
+    }
+
+    pub fn args() -> Vec<Arg<'static, 'static>> {
+        vec![
+            Arg::with_name("api")
+                .long("api")
+                .help("Specify the ipfs daemon to connect to")
+                .default_value("/ip4/127.0.0.1/tcp/5001/https")
+        ]
     }
 }

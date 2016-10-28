@@ -1,6 +1,6 @@
 mod peers;
 
-use clap::{ App, SubCommand, ArgMatches };
+use clap::{ App, AppSettings, SubCommand, ArgMatches };
 
 use context::Context;
 
@@ -12,6 +12,7 @@ pub fn subcommand() -> App<'static, 'static> {
             The swarm is the component that opens, listens for, and \
             maintains connections to other ipfs peers in the internet.\
         ")
+        .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands(vec![
             peers::subcommand(),
         ])

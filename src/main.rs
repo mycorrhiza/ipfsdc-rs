@@ -5,15 +5,12 @@ extern crate ipfs_client;
 extern crate tokio_core;
 extern crate multiaddr;
 
-use clap::{ App, AppSettings, Arg };
+mod context;
+mod subcommands;
+
+use clap::{ App, AppSettings };
 
 use context::Context;
-
-mod context;
-
-mod info;
-mod version;
-mod swarm;
 
 fn main() {
     let matches = App::new("IPFS Daemon CLI")
@@ -27,25 +24,9 @@ fn main() {
             AppSettings::ColoredHelp,
             AppSettings::DeriveDisplayOrder,
         ])
-        .subcommands(vec![
-            info::subcommand(),
-            version::subcommand(),
-            swarm::subcommand(),
-        ])
-        .args(&[
-            Arg::with_name("api")
-                .long("api")
-                .help("Specify the ipfs daemon to connect to")
-                .default_value("/ip4/127.0.0.1/tcp/5001/https")
-        ])
+        .subcommands(subcommands::subcommands())
+        .args(&*Context::args())
         .get_matches();
 
-    let mut context = Context::new(&matches);
-
-    match matches.subcommand() {
-        ("info", Some(matches)) => info::run(&mut context, matches),
-        ("version", Some(matches)) => version::run(&mut context, matches),
-        ("swarm", Some(matches)) => swarm::run(&mut context, matches),
-        _ => unreachable!(),
-    }
+    subcommands::run(&mut Context::new(&matches), matches);
 }
