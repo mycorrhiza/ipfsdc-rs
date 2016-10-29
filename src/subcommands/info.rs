@@ -23,7 +23,7 @@ pub fn subcommand() -> App<'static, 'static> {
 pub fn run(context: &mut Context, matches: &ArgMatches) {
     let future = matches.value_of("peerid")
         .map(|id| context.client.peer_info(id))
-        .unwrap_or_else(|| context.client.host_info());
+        .unwrap_or_else(|| context.client.local_info());
 
     print(context.event_loop.run(future).expect("TODO: not crash here"));
 }

@@ -1,4 +1,5 @@
 mod peers;
+mod addrs;
 
 use clap::{ App, AppSettings, SubCommand, ArgMatches };
 
@@ -15,12 +16,14 @@ pub fn subcommand() -> App<'static, 'static> {
         .setting(AppSettings::ArgRequiredElseHelp)
         .subcommands(vec![
             peers::subcommand(),
+            addrs::subcommand(),
         ])
 }
 
 pub fn run(context: &mut Context, matches: &ArgMatches) {
     match matches.subcommand() {
         ("peers", Some(matches)) => peers::run(context, matches),
+        ("addrs", Some(matches)) => addrs::run(context, matches),
         _ => unreachable!(),
     }
 }
