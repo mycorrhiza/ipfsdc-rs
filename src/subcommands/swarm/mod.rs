@@ -1,5 +1,7 @@
 mod peers;
 mod addrs;
+mod connect;
+mod disconnect;
 
 use clap::{ App, AppSettings, SubCommand, ArgMatches };
 
@@ -17,6 +19,8 @@ pub fn subcommand() -> App<'static, 'static> {
         .subcommands(vec![
             peers::subcommand(),
             addrs::subcommand(),
+            connect::subcommand(),
+            disconnect::subcommand(),
         ])
 }
 
@@ -24,6 +28,8 @@ pub fn run(context: &mut Context, matches: &ArgMatches) {
     match matches.subcommand() {
         ("peers", Some(matches)) => peers::run(context, matches),
         ("addrs", Some(matches)) => addrs::run(context, matches),
+        ("connect", Some(matches)) => connect::run(context, matches),
+        ("disconnect", Some(matches)) => disconnect::run(context, matches),
         _ => unreachable!(),
     }
 }

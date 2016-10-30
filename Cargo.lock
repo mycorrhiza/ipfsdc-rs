@@ -60,7 +60,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "clap"
 version = "2.16.3"
-source = "git+https://github.com/kbknapp/clap-rs#8190a1c9d950babb803d230cf264b66bb7517c4e"
+source = "git+https://github.com/kbknapp/clap-rs#6c11ccf443d46258d51f7cda33fbcc81e7fe8e90"
 dependencies = [
  "ansi_term 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "bitflags 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -143,7 +143,7 @@ dependencies = [
 [[package]]
 name = "ipfs-client"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/ipfs-client-rs#7a86caf516908c438638df4bed29284f5951ebc8"
+source = "git+https://github.com/Nemo157/ipfs-client-rs#9a24e221aed3ad946282024558d5c05e94436220"
 dependencies = [
  "curl 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",

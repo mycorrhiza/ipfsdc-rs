@@ -5,6 +5,7 @@ extern crate ipfs_client;
 extern crate tokio_core;
 extern crate multiaddr;
 
+mod util;
 mod context;
 mod subcommands;
 
