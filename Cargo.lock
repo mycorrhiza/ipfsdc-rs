@@ -145,7 +145,7 @@ dependencies = [
 [[package]]
 name = "ipfs-client"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/ipfs-client-rs#330210e88962e96544973e4e0bf64c49aa827270"
+source = "git+https://github.com/Nemo157/ipfs-client-rs#f56636a867c6d53616563b52a4a2496d55761b76"
 dependencies = [
  "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
  "curl 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -248,7 +248,7 @@ dependencies = [
 [[package]]
 name = "multihash"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/multihash-rs#fe43b4be10f674427a1e16a1c0cfa6afd2fb6648"
+source = "git+https://github.com/Nemo157/multihash-rs#8f442b4036b1a86b925bbfa6d4a0f8e68447344a"
 dependencies = [
  "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
  "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
