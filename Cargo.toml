@@ -4,8 +4,10 @@ version = "0.1.0"
 authors = ["Wim Looman <wim@nemo157.com>"]
 
 [dependencies]
+base58 = { git = "https://github.com/Nemo157/base58-rs" }
 clap = { git = "https://github.com/kbknapp/clap-rs" }
 futures = "0.1.2"
 ipfs-client = { git = "https://github.com/Nemo157/ipfs-client-rs" }
 multiaddr = { git = "https://github.com/Nemo157/multiaddr-rs" }
+multihash = { git = "https://github.com/Nemo157/multihash-rs" }
 tokio-core = "0.1.0"

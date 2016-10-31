@@ -4,6 +4,7 @@ use clap::{ App, Arg, SubCommand, ArgMatches };
 use ipfs_client::data::PeerInfo;
 
 use context::Context;
+use util;
 
 pub fn subcommand() -> App<'static, 'static> {
     SubCommand::with_name("info")
@@ -16,13 +17,15 @@ pub fn subcommand() -> App<'static, 'static> {
         .args(&[
             Arg::with_name("peerid")
                 .takes_value(true)
-                .help("Id of peer to lookup"),
+                .help("Id of peer to lookup")
+                .validator(util::multihash_validator),
         ])
 }
 
 pub fn run(context: &mut Context, matches: &ArgMatches) {
     let future = matches.value_of("peerid")
-        .map(|id| context.client.peer_info(id))
+        .map(|s| util::parse_multihash(s).expect("impossible: validated in arg"))
+        .map(|id| context.client.peer_info(&id))
         .unwrap_or_else(|| context.client.local_info());
 
     print(context.event_loop.run(future).expect("TODO: not crash here"));

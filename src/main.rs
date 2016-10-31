@@ -1,8 +1,10 @@
+extern crate base58;
 #[macro_use]
 extern crate clap;
 extern crate futures;
 extern crate ipfs_client;
 extern crate tokio_core;
+extern crate multihash;
 extern crate multiaddr;
 
 mod util;
