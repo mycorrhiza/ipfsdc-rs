@@ -145,7 +145,7 @@ dependencies = [
 [[package]]
 name = "ipfs-client"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/ipfs-client-rs#e1ebcf443e6cab57c354cbd0db747dd362108409"
+source = "git+https://github.com/Nemo157/ipfs-client-rs#330210e88962e96544973e4e0bf64c49aa827270"
 dependencies = [
  "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
  "curl 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -237,7 +237,7 @@ dependencies = [
 [[package]]
 name = "multiaddr"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/multiaddr-rs#a1090a830833eca1b515800da98dce214e9d2c51"
+source = "git+https://github.com/Nemo157/multiaddr-rs#d032e5f8853fc148fdd97dbc0653bcc98bf68d9c"
 dependencies = [
  "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
  "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -248,7 +248,11 @@ dependencies = [
 [[package]]
 name = "multihash"
 version = "0.1.0"
-source = "git+https://github.com/Nemo157/multihash-rs#a1e2392bdaf9f82747e4c47ff7a6582541b9a285"
+source = "git+https://github.com/Nemo157/multihash-rs#fe43b4be10f674427a1e16a1c0cfa6afd2fb6648"
+dependencies = [
+ "base58 0.1.0 (git+https://github.com/Nemo157/base58-rs)",
+ "error-chain 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "net2"
