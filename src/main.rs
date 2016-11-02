@@ -1,4 +1,3 @@
-extern crate base58;
 #[macro_use]
 extern crate clap;
 extern crate futures;

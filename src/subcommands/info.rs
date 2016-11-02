@@ -1,7 +1,9 @@
 use std::cmp;
+use std::str::FromStr;
 
 use clap::{ App, Arg, SubCommand, ArgMatches };
 use ipfs_client::data::PeerInfo;
+use multihash::MultiHash;
 
 use context::Context;
 use util;
@@ -24,7 +26,7 @@ pub fn subcommand() -> App<'static, 'static> {
 
 pub fn run(context: &mut Context, matches: &ArgMatches) {
     let future = matches.value_of("peerid")
-        .map(|s| util::parse_multihash(s).expect("impossible: validated in arg"))
+        .map(|s| MultiHash::from_str(s).expect("impossible: validated in arg"))
         .map(|id| context.client.peer_info(&id))
         .unwrap_or_else(|| context.client.local_info());
 
