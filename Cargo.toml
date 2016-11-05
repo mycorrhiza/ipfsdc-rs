@@ -6,7 +6,7 @@ authors = ["Wim Looman <wim@nemo157.com>"]
 [dependencies]
 clap = "2.16.4"
 futures = "0.1.2"
-ipfs-client = { git = "https://github.com/Nemo157/ipfs-client-rs" }
-multiaddr = { git = "https://github.com/Nemo157/multiaddr-rs" }
-multihash = { git = "https://github.com/Nemo157/multihash-rs" }
+ipfs-client = { git = "https://github.com/mycorrhiza/ipfs-client-rs" }
+maddr = "0.1.0"
+mhash = "0.1.2"
 tokio-core = "0.1.0"

@@ -3,7 +3,7 @@ use std::str::FromStr;
 
 use clap::{ App, Arg, SubCommand, ArgMatches };
 use ipfs_client::data::PeerInfo;
-use multihash::MultiHash;
+use mhash::MultiHash;
 
 use context::Context;
 use util;

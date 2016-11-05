@@ -2,7 +2,7 @@ use std::str::FromStr;
 
 use clap::{ App, SubCommand, Arg, ArgMatches };
 use futures::Future;
-use multiaddr::MultiAddr;
+use maddr::MultiAddr;
 
 use util;
 use context::Context;

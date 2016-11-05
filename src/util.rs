@@ -2,8 +2,8 @@ use std::fmt::Debug;
 use std::str::FromStr;
 
 use futures::{ self, Future };
-use multihash::MultiHash;
-use multiaddr::MultiAddr;
+use mhash::MultiHash;
+use maddr::MultiAddr;
 use tokio_core::reactor::Core;
 
 pub fn run_all<F, I>(event_loop: &mut Core, futures: I)
