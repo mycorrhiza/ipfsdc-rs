@@ -1,3 +1,14 @@
+#![allow(unknown_lints)] // for clippy
+#![warn(fat_ptr_transmutes)]
+#![warn(missing_copy_implementations)]
+#![warn(missing_debug_implementations)]
+// TODO #![warn(missing_docs)]
+#![warn(trivial_casts)]
+#![warn(trivial_numeric_casts)]
+#![warn(unused_import_braces)]
+#![warn(unused_results)]
+#![warn(variant_size_differences)]
+
 #[macro_use]
 extern crate clap;
 extern crate futures;
